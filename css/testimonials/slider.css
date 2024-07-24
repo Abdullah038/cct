@@ -1,0 +1,201 @@
+#testimonials-carousel-cover {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative; /* Needed to position the background color */
+}
+
+#testimonials-carousel {
+    width: 80%;
+    position: relative; /* Needed for the pseudo-element */
+}
+
+.owl-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 75px;
+    height: 75px;
+    padding: 25px 0;
+    position: relative; /* Needed for z-index */
+}
+
+.slider img {
+    height: 75px;
+    border-radius: 100px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1; /* Ensure the image is above the background */
+}
+
+.owl-item.center .slider img {
+    transform: scale(1.5);
+}
+
+#testimonials-carousel::before {
+    content: "";
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    width: 150px;
+    height: 135px;
+    background: #ff813c;
+    border-radius: 10px 10px 0 0;
+    z-index: 0; /* Ensure the background is behind the image */
+}
+
+
+.testimonial-content {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    background: linear-gradient(45deg, #ff5a00, #FE8F52, #ff5a00);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.images-content {
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.images-content img {
+    border-radius: 5px;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-content h3 {
+    line-height: 1.2em;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+.text-content-para {
+    margin-top: 10px;
+    color: #f5f5f5;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1000px) {
+    .testimonial-content {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .images-content {
+        padding: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .images-content img {
+        width: 40vw;
+        height: auto;
+    }
+
+    .text-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-content h3 {
+        font-size: 1.8em;
+    }
+
+    .text-content p {
+        font-size: 1em;
+    }
+
+    .text-content-para {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-content {
+        padding: 20px;
+    }
+
+    .images-content img {
+        width: 40vw;
+        height: auto;
+    }
+
+    .text-content h3 {
+        font-size: 1.5em;
+    }
+
+    .text-content p {
+        font-size: 0.9em;
+    }
+
+    .text-content-para {
+        font-size: 0.8em;
+    }
+}
+
+
+p{
+    margin: 0;
+}
+
+
+.owl-nav {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    background: #ff813c;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 28px !important;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.owl-nav button.owl-prev {
+    position: absolute;
+    left: calc(50% - 100px); /* Adjust as needed */
+}
+
+.owl-nav button.owl-next {
+    position: absolute;
+    right: calc(50% - 100px); /* Adjust as needed */
+}
+
+.owl-nav button.owl-prev:hover,
+.owl-nav button.owl-next:hover {
+    background: #FE8F52;
+    border-radius: 3px;
+}

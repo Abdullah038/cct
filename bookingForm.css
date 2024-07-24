@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: "Karla", sans-serif;
+  }
+  
+  .background-wrapper {
+    /* background-image: url("images/pesronalTrainer.jpg"); */
+    background-size: cover;
+    background-position: top center;
+  }
+  
+  .gradient {
+    background-image: linear-gradient(to right, #000 0%, transparent 50%);
+  }
+  
+  #booking-form {
+    background-color: #0b0b0a;
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+  
+  .booking-header {
+    margin-bottom: 30px;
+  }
+  
+  .booking-header h2 {
+    text-align: center;
+    margin: 0 auto; /* Centers the text horizontally */
+    font-size: 28px;
+    color: #fff;
+    position: relative; /* Essential for positioning pseudo-elements */
+  }
+  
+  .booking-header h2::before,
+  .booking-header h2::after {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 45%; /* Vertically centers the borders */
+    transform: translateY(-50%); /* Ensures the line is perfectly centered */
+    width: calc(50% - 9.5em); /* Adjust this value based on the text width and desired margin */
+    height: .5px; /* Height of the border */
+    background-color: #c8c8c8; /* Color of the border, adjust as needed */
+  }
+  
+  .booking-header h2::before {
+    left: 0;
+    margin-left: 20px; /* Space from the left edge of the viewport */
+  }
+  
+  .booking-header h2::after {
+    right: 0;
+    margin-right: 20px; /* Space from the right edge of the viewport */
+  }
+  
+  .booking-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for the first set of inputs */
+    grid-gap: 15px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  select option {
+    background-color: #0b0b0a;
+  }
+  
+  .input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .input-icon .icon {
+    position: absolute;
+    left: 10px;
+    color: #d8d8d8;
+    z-index: 10;
+  }
+  
+  .input-icon .grid-item-booking-form,
+  .input-icon textarea {
+    padding: 10px 10px 10px 40px;
+    width: calc(100% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+  }
+  
+  .input-icon textarea {
+    min-height: 100px;
+  }
+  
+  .input-icon select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><polygon points="6,9 0,0 12,0 " style="fill:%23ff5a00;"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px 12px;
+  }
+  
+  .input-icon:focus-within .grid-item-booking-form,
+  .input-icon:focus-within textarea {
+    border-color: #ff5a00;
+    background-color: rgba(255, 90, 0, 0.1);
+  }
+  
+  .booking-btn {
+    padding: 12px 25px;
+    background-color: #ff5a00;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    grid-column: 1 / -1; /* Span across all columns */
+  }
+  
+  .booking-btn:hover {
+    background-color: #e65000;
+    transform: translateY(-2px);
+  }
+  
+  .booking-form-grid .grid-span-2 {
+    grid-column: span 2; /* Spans two columns */
+    width: 100%;
+  }
+  
+  .booking-form-grid .grid-span-full-booking {
+    grid-column: 1 / -1; /* Ensure textarea spans full width */
+  }
+  
+  /* For better visual separation and alignment */
+  .booking-form-grid .textarea-icon {
+    grid-column: 1 / -1; /* This ensures that the comment box is on its own row */
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .booking-form-grid {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .booking-header h2 {
+      font-size: 24px; /* Adjust the font size for smaller screens */
+    }
+  
+    .booking-header h2::before,
+    .booking-header h2::after {
+      width: calc(50% - 5em); /* Adjust the width of the borders */
+    }
+  
+    .input-icon .grid-item-booking-form,
+    .input-icon textarea {
+      padding: 10px 10px 10px 35px; /* Adjust padding for smaller screens */
+    }
+  
+    .booking-btn {
+      width: 100%;
+      padding: 15px; /* Adjust padding for better touch area */
+    }
+    .booking-header h2::before,
+    .booking-header h2::after {
+        display: none;
+    }
+  }
+  
+  @media (max-width: 450px){
+    .booking-header h2 {
+        font-size: 18px; /* Adjust the font size for smaller screens */
+      } 
+  }

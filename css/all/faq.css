@@ -1,0 +1,117 @@
+#faq-section {
+    padding: 50px 20px;
+background-color: #090908;
+}
+#faq-container-cover{
+    display: flex;
+    justify-content: center;
+}
+
+.faq-container {
+    margin-top: 20px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the FAQs in the container */
+}
+.heading-faq h2{
+    position: relative;
+    font-size: 2em;
+}
+.heading-faq h2::before{
+    position: absolute;
+    content: '';
+    height: .5px;
+    width: 456px;
+    background-color: #e6e6e67c;
+    top: 35px;
+    left: -30px;
+}
+
+.heading-faq{
+    margin-bottom: 30px;
+}
+.faq {
+    margin-bottom: 10px;
+    padding: 15px; /* More padding for better readability */
+    background-color: #0b0b0bad;
+    border-radius: 5px;
+    border: 1px solid rgba(105, 105, 105, 0.25);
+    border-left: 5px solid #ff5a00;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Soft shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    width: 90%; /* Responsive width */
+    cursor: pointer;
+}
+
+.faq:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.faq h3.faq-question {
+    color: #f5f4f4;
+    font-size: 20px; 
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+
+.faq p.faq-answer {
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 0;
+    margin-left: 28px;
+}
+
+
+.icon {
+    margin-right: 10px;
+    font-size: 20px;
+    transition: transform 0.5s ease; /* Smoother rotation transition */
+}
+
+/* Styling for expanded state */
+.faq.expanded .icon {
+    transform: rotate(45deg); /* Rotate icon for open state */
+    color: #c44500;
+}
+
+.faq.expanded p.faq-answer {
+    max-height: 500px; /* Sufficient max-height for expanding content */
+}
+
+
+
+.faq p.faq-answer {
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 0; 
+}
+
+
+
+/* SERVICES */
+.faq-services{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+.faq-services h3{
+    color: #ffffff !important;
+}
+
+.heading-services-faq{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px){
+    .faq-container{
+        width: 100%;
+    }
+}

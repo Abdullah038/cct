@@ -1,0 +1,95 @@
+body{
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+
+#nutrition-heading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;  /* Ensures no overflow of the pseudo-element */
+}
+
+#nutrition-heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/nutrition-hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.75;  /* Set the opacity for the background image */
+    pointer-events: none;  /* Makes the pseudo-element non-interactive */
+}
+
+#nutrition-heading > * {
+    position: relative;  /* Ensure content is layered above the pseudo-element */
+    z-index: 1;  /* Higher z-index to keep text and children elements on top */
+}
+
+
+#nutrition-heading h1{
+    font-size: .8em;
+    font-weight: 100;
+    opacity: .8;
+    margin-bottom: 10px;
+}
+
+#nutrition-heading h2{
+    text-align: center;
+    line-height: 1.5em;
+}
+#nutrition-heading-h2-top{
+    font-size: 2.5em;
+}
+#nutrition-heading-h2-bottom{
+    font-size: 1.8em;
+    font-weight: 500;
+}
+#nutrition-heading-link{
+    padding: 40px 0;
+}
+#nutrition-heading a {
+    display: inline-flex; /* Ensures the icon aligns with the text */
+    align-items: center; /* Center the items vertically */
+    justify-content: center; /* Center content horizontally within the button */
+    padding: 10px 20px; /* Padding for better button sizing */
+    border: 1px solid #fff; /* Button border */
+    border-radius: 25px; /* Rounded corners for the button */
+    background-color: #e649193c; /* Background color */
+    color: #fff; /* Text color */
+    font-size: 1em; /* Font size */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+#nutrition-heading a:hover {
+    background-color: #ff5a00; /* Darker background on hover */
+    color: #ffffff; /* Text color change on hover */
+}
+
+#nutrition-heading a i {
+    margin-left: 5px; /* Adds space between text and icon */
+    transform: rotate(45deg); /* Rotates the icon to be diagonal */
+    transition: transform 0.3s; /* Smooth transformation on hover */
+}
+
+#nutrition-heading a:hover i {
+    transform: translate(2px, -2px) rotate(45deg); /* Moves the icon slightly up and keeps it diagonal when hovered */
+}
+
+@media (max-width: 500px){
+    #nutrition-heading-h2-top {
+        font-size: 1.5em;
+    }
+    #nutrition-heading-h2-bottom{
+        font-size: 1.2em;
+    }
+}

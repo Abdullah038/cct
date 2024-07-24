@@ -1,0 +1,183 @@
+.trainingVideoSect {
+    background-image: url('../../images/backgroundAll.png');
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    padding: 50px;
+    gap: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.trainingContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.videoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoContainer video {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.trainingContentHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #151515;
+    border-radius: 10px;
+    color: white;
+}
+
+.trainingContentHeading h3 {
+    margin: 0;
+}
+
+.trainingContentHeading button {
+    background-color: #ff5a00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.trainingContentHeading button:hover {
+    background-color: #e04d00;
+    transform: scale(1.05);
+}
+
+.videoDetails p {
+    background-color: #151515;  
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    line-height: 1.6;
+}
+
+.trainingSelector {
+    background-color: #151515;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selectorAll ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.selectorAll li {
+    margin-bottom: 10px;
+}
+
+.selectorAll a {
+    text-decoration: none;
+    color: #ff5a00;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.selectorAll a:hover {
+    background-color: #e04d00;
+    color: white;
+    transform: scale(1.05);
+}
+
+@media (max-width: 1000px) {
+    .trainingVideoSect {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .trainingSelector {
+        order: 1;
+        margin-bottom: 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0;
+    }
+
+    .trainingContent {
+        order: 2;
+    }
+
+    .swiper-container {
+        width: 100%;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .swiper-slide a {
+        padding: 10px 20px;
+        border-radius: 50px;
+        text-align: center;
+        width: auto;
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    .selectorAll ul {
+        padding: 6px 5px;
+        flex-direction: row;
+    }
+
+    .selectorAll li {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    .trainingSelector::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .trainingSelector::-webkit-scrollbar-track {
+        background: #151515;
+        border-radius: 10px;
+    }
+
+    .trainingSelector::-webkit-scrollbar-thumb {
+        background: #bc4200;
+        border-radius: 10px;
+    }
+
+    .trainingSelector::-webkit-scrollbar-thumb:hover {
+        background: #e04d00;
+    }
+}
+
+@media (max-width: 500px){
+    .trainingContentHeading h3{
+        font-size: 1em;
+    }
+    .trainingContentHeading button{
+        padding: 10px 10px;
+    }
+}

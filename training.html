@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/components/navbar.css">
+  <link rel="stylesheet" href="css/training/top.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/training/videoSect.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div id="logo-link">
+        <a href="#home" class="logo">
+          <img src="images/cctrainingLogo.png" width="40" alt="logo" />
+        </a>
+      </div>
+      <div class="menu">
+        <button class="menu-icon" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links-all">
+          <div class="navbar-links" id="navbarLinks">
+            <a href="index.html"><span><i class="fas fa-home"></i> HOME</span></a>
+            <a href="#"><span class="active"><i class="fas fa-dumbbell"></i> TRAINING</span></a>
+            <a href="nutrition.html"><span><i class="fas fa-apple-alt"></i> NUTRITION</span></a>
+            <a href="basketall.html"><span><i class="fas fa-basketball-ball"></i> BASKETBALL</span></a>
+            <a href="testimonials.html"><span><i class="fas fa-comments"></i>
+                TESTIMONIALS</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="contact-link">
+        <a href="index.html#booking-form">
+          <span>BOOK NOW<i class="fas fa-calendar-check"></i></span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero-sections">
+      <div id="nutrition-heading">
+        <h1>TRAINING</h1>
+        <h2>
+          <span id="nutrition-heading-h2-top">
+            TRAIN<span class="signature-color"> CHAOTIC</span></span><br /><span id="nutrition-heading-h2-bottom">
+            WITH CONTROLLED <span class="signature-color">RESULTS </span></span>
+        </h2>
+      </div>
+    </section>
+
+    <section class="trainingVideoSect">
+      <div class="trainingContent">
+          <div class="videoContainer">
+              <video id="mainVideo" width="100%" controls>
+                  <source src="videos/training/strength.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+          <div class="videoDetails">
+              <div class="trainingContentHeading">
+                  <h3 id="videoTitle">STRENGTH TRAINING</h3>
+                  <button id="nextButton">Next Video</button>
+              </div>
+              <p id="videoDescription">Strength training is crucial for improving muscle mass and strength. In this video, you will learn various exercises that target major muscle groups, proper form techniques, and tips to maximize your strength training routine. Whether you are a beginner or an experienced lifter, this session provides valuable insights to help you achieve your fitness goals.</p>
+          </div>
+      </div>
+      <div class="trainingSelector">
+          <div class="selectorAll">
+              <ul>
+                  <li><a href="#" data-video-src="videos/training/strength.mp4" data-video-title="STRENGTH TRAINING" data-video-description="Strength training is crucial for improving muscle mass and strength. In this video, you will learn various exercises that target major muscle groups, proper form techniques, and tips to maximize your strength training routine. Whether you are a beginner or an experienced lifter, this session provides valuable insights to help you achieve your fitness goals."><i class="fas fa-play"></i> Strength Training</a></li>
+                  <li><a href="#" data-video-src="videos/training/mobility.mp4" data-video-title="MOBILITY TRAINING" data-video-description="Mobility training focuses on enhancing the range of motion in your joints and improving overall flexibility. This video covers various stretches and mobility exercises that can help reduce the risk of injury and improve athletic performance. Learn how to incorporate mobility drills into your regular fitness routine for better movement and flexibility."><i class="fas fa-play"></i> Mobility Training</a></li>
+                  <li><a href="#" data-video-src="videos/training/athletic.mp4" data-video-title="ATHLETIC TRAINING" data-video-description="Athletic training is designed to enhance speed, agility, and endurance. This video provides a comprehensive guide to workouts that mimic athletic movements, helping you develop the skills needed for various sports. From high-intensity interval training to plyometric exercises, discover how to train like an athlete and improve your overall performance."><i class="fas fa-play"></i> Athletic Training</a></li>
+                  <li><a href="#" data-video-src="videos/training/transformation.mp4" data-video-title="TRANSFORMATION TRAINING" data-video-description="Transformation training aims at significant physical changes through a combination of strength training, cardio, and proper nutrition. Follow this video to understand the principles of body transformation, including effective workout plans, dietary guidelines, and motivational tips to help you stay on track and achieve your fitness goals."><i class="fas fa-play"></i> Transformation Training</a></li>
+                  <li><a href="#" data-video-src="videos/training/bodyBuilding.mp4" data-video-title="BODY BUILDING TRAINING" data-video-description="Bodybuilding training focuses on building muscle mass and achieving a well-defined physique. This video offers a detailed look at bodybuilding routines, including compound and isolation exercises, training splits, and nutritional strategies. Whether you are preparing for a competition or aiming to improve your muscle definition, this session provides essential guidance."><i class="fas fa-play"></i> Body Building Training</a></li>
+              </ul>
+          </div>
+      </div>
+  </section>
+
+  
+  
+  
+
+  </main>
+
+  <footer>
+    <div class="footer-socials">
+      <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-tiktok"></i></a>
+      <a href=""><i class="fa-brands fa-square-youtube"></i></a>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-main-content">
+        <h6>REQUEST A <span class="signature-color">CALL</span></h6>
+        <p>
+          Share your fitness goals with us and discover how we can help you
+          achieve them. Whether you're looking to build strength, lose weight,
+          or enhance your overall health, Coach Jeff is here to guide you.
+          Start your journey today!
+        </p>
+      </div>
+      <div class="footer-main-contact">
+        <div class="footer-contact-phone">
+          <a href=""><i class="fa-solid fa-phone"></i>(647) 914-1071</a>
+        </div>
+
+        <div class="footer-contact-mail">
+          <a href=""><i class="fa-solid fa-envelope"></i>info@cctraining.com</a>
+        </div>
+        <div class="footer-contact-address">
+          <a href=""><i class="fa-solid fa-location-dot"></i>1955 King St E #1,
+            <span class="break-line-footer"><br />&emsp;</span>Hamilton, ON</a>
+        </div>
+      </div>
+
+      <div class="footerForm">
+        <form action="" class="footer-form">
+          <div class="input-wrapper">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="FULL NAME" />
+          </div>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="E-MAIL" />
+          </div>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" placeholder="PHONE NO." />
+          </div>
+          <div class="input-wrapper textarea-wrapper">
+            <i class="fa-solid fa-message"></i>
+            <textarea placeholder="HOW CAN WE HELP?"></textarea>
+          </div>
+          <button>SUBMIT</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-third-col"></div>
+    <div class="footer-fourth-box"></div>
+    <div class="footer-fifth-box">
+      © 2024 Controlled Chaos Training. All rights reserved.&ensp;
+      <a href="/terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms and Conditions
+      </a>
+      &ensp;| Crafted and designed by&ensp;
+      <a href="https://lionsmedia.ca/" target="_blank" rel="noopener noreferrer">LIONSMEDIA.CA</a>
+    </div>
+
+    <div class="footer-sixth-box"></div>
+  </footer>
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <script src="navbar.js"></script>
+  <script src="js/training/video.js"></script>
+</body>
+
+</html>

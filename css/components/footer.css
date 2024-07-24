@@ -1,0 +1,346 @@
+.signature-color {
+  color: #e64a19;
+}
+body {
+  margin: 0;
+}
+
+footer {
+  position: relative; /* Needed for proper positioning of the background */
+  display: grid;
+  grid-template-columns: 0.05fr 0.9fr 0.05fr;
+  grid-template-rows: 0.9fr 0.1fr;
+  color: #ffffff;
+  padding: 0px 0; /* Adjust padding as needed */
+  background-color: black;
+}
+
+footer::before {
+  content: ""; /* Necessary for pseudo-elements */
+  position: absolute;
+  top: 252px;
+  height: 35%;
+  left: 0;
+  width: 100%;
+  background-image: url("images/cctrainingLogo.png"); /* Path to your image */
+  background-position: center; /* Centers the background image */
+  opacity: 0.1; /* Low opacity */
+  background-repeat: no-repeat;
+  background-size: 80%;
+  z-index: -1; /* Ensures the image stays in the background */
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: space-evenly;
+  border-right: 1px solid #d1d1d1;
+}
+
+.footer-socials i {
+  font-size: 2em;
+  color: #ffffff;
+}
+.footer-socials i:hover {
+  color: #ff5a00;
+}
+
+.footer-main {
+  padding: 20px 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.footer-main-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.footer-main-content h6 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.footer-main-content p {
+  padding-left: 20px;
+  opacity: 0.75;
+  padding-top: 10px;
+  width: 75%;
+}
+
+.footer-main-contact {
+  padding: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column: 1;
+  grid-row: 2;
+}
+.footerForm {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.footer-main-contact a {
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.footer-main-contact i {
+  padding-right: 5px;
+}
+
+.footer-main-contact a:hover {
+  color: #ff5a00;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-third-col {
+  border-left: 1px solid #d1d1d1;
+}
+.footer-fourth-box {
+  border-top: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+}
+.footer-fifth-box {
+  border-top: 1px solid #d1d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  font-size: 0.8em;
+}
+
+.footer-fifth-box a {
+  color: #ff5a00;
+  display: contents;
+}
+.footer-fifth-box a:hover {
+  color: #ff5900ac;
+}
+
+.footer-sixth-box {
+  border-top: 1px solid #d1d1d1;
+  border-left: 1px solid #d1d1d1;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds space between form elements */
+  padding: 20px; /* Padding around the form */
+  border-radius: 5px; /* Softens the edges */
+  align-items: center;
+  min-width: 400px;
+}
+
+.footer-form input[type="text"],
+.footer-form input[type="email"],
+.footer-form input[type="tel"],
+.footer-form textarea {
+  width: 100%; /* Ensures full width within the form */
+  padding: 8px; /* Comfortable padding inside the input fields */
+  margin: 1px 0; /* Space between each field */
+  border-radius: 10px; /* Rounded corners for the inputs */
+  color: #ffffff; /* Dark text for readability */
+}
+
+.footer-form input[type="text"]:focus,
+.footer-form input[type="email"]:focus,
+.footer-form input[type="tel"]:focus,
+.footer-form textarea:focus {
+  border-color: 1px solid #ff5a00; /* Highlight color on focus */
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff0f; /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.input-wrapper i {
+  margin-right: 10px;
+  color: #ff5a00; /* Icon color */
+}
+
+.footer-form input,
+.footer-form textarea {
+  width: 100%;
+  padding: 12px 8px;
+  margin: 0;
+  border: none;
+  background: none;
+  color: #ffffff;
+}
+
+.footer-form input:focus,
+.footer-form textarea:focus {
+  outline: 1px solid #ff5a00; /* Focus outline */
+}
+
+.footer-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.footer-form button {
+  padding: 5px 15px;
+  background-color: #ff5a00;
+  color: #ffffff;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 50%;
+  transition: background-color 0.3s;
+}
+
+.footer-form button:hover {
+  background-color: #e64a19;
+}
+.footer-main-contact i{
+  color: #ff5a00;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 1000px) {
+  footer {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: repeat(
+      3,
+      auto
+    ); /* Define rows for each content block */
+    padding: 10px 0; /* Adjust overall footer padding */
+  }
+
+  .footer-socials,
+  .footer-main {
+    display: flex; /* Ensure all sections are using flexbox */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-evenly; /* Center items horizontally */
+    align-items: center; /* Center items vertically for a neat appearance */
+    padding: 5px; /* Small padding for spacing */
+  }
+
+  .footer-fifth-box {
+
+    text-align: center;
+  }
+  .footer-socials {
+    flex: 1; /* Allow social icons to take full space available */
+    border-right: none; /* Remove border */
+    position: relative;
+  }
+
+  .footer-socials::before{
+    content: '';
+    position: absolute;
+    height: .5px;
+    width: 85%;
+    background-color: #9f9f9f;
+    top: 50px;
+  }
+  .footer-main p {
+    display: none;
+  }
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .footer-main-content {
+    grid-row: 1;
+  }
+
+  .footer-main-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    grid-column: 1;
+    grid-row: 3;
+    padding: 10px 10%;
+  }
+  
+
+  .footer-contact-phone {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .footer-contact-mail {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .footer-contact-address {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .footer-contact-phone,
+  .footer-contact-mail,
+  .footer-contact-address {
+    display: flex;
+    justify-content:baseline;
+  }
+  .footer-contact-phone a,
+  .footer-contact-mail a,
+  .footer-contact-address a{
+    display: inline-flex;
+  } 
+  .footerForm {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .break-line-footer{
+    display: none;
+  }
+
+  .footer-fifth-box {
+    flex: 1; /* Allow terms and conditions to take full space available */
+    order: 2; /* Position the terms and conditions last */
+    padding: 5px 10px; /* Adjust padding */
+  }
+
+  /* Adjust the form within the footer-main to ensure it fits well */
+  .footer-form {
+    flex-direction: column; /* Align form items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap in small screens */
+    justify-content: space-around; /* Space out form elements */
+    min-width: 0px;
+  }
+  .footer-main-content h6 {
+    font-size: 2em;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .input-wrapper,
+  .footer-form button {
+    width: 80%; /* Half width, allowing two items per row */
+  }
+
+  .footer-form textarea {
+    width: 100%; /* Textarea takes full width */
+    order: 3; /* Position textarea after input fields in wrapping */
+  }
+}

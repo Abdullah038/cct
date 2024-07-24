@@ -1,0 +1,219 @@
+body{
+  margin: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px 0;
+}
+.navbar-links {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 4px;
+  border-radius: 45px;
+}
+
+.navbar-links a {
+  display: flex; /* Ensures that links fill the horizontal space */
+  align-items: center;
+  justify-content: center;
+  margin: 3px 5px; /* Adjust gap between links */
+  text-decoration: none;
+  color: #c5c5c5;
+  font-size: .8vw;
+}
+
+#contact-link a {
+  padding: 7px 25px;
+}
+
+.navbar-links a span {
+  padding: 7px 25px;
+  border: 1px solid transparent; /* Add a transparent border by default */
+  border-radius: 42px;
+}
+
+.navbar-links a span:hover {
+  border-color: rgba(255, 89, 0, 0.5); /* Only change the color on hover */
+  color: #ffffff;
+  background-color: rgba(26, 26, 26, 0.7);
+}
+
+.navbar-links a span.active {
+  border: 1px solid rgba(255, 89, 0, 0.5);
+  border-radius: 42px;
+  color: #ffffff;
+  background-color: rgba(26, 26, 26, 0.7);
+}
+.logo {
+  margin-left: 30px;
+}
+.logo img{
+  width: 200px;
+}
+.nav-links-all {
+  display: flex;
+  justify-content: center; /* Center links to avoid gaps on the sides */
+}
+
+#contact-link {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 89, 0, 0.5);
+
+  border-right: none;
+  padding: 4px 0;
+  border-radius: 42px 0px 0px 42px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#contact-link a {
+  display: flex;
+  text-decoration: none;
+  color: #c5c5c5;
+}
+#contact-link a span {
+  padding-right: 10px;
+  font-size: 1vw;
+}
+#contact-link:hover {
+  background-color: rgba(26, 26, 26, 0.7);
+  border-radius: 42px 0px 0px 42px;
+
+}
+#contact-link a:hover{
+    color: #ffffff;
+} 
+
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 28px 20px;
+  background: transparent;
+  border: none;
+  z-index: 10001;
+}
+
+.menu-icon span {
+  height: 2px;
+  background: #ffffff;
+  margin-bottom: 5px;
+  width: 25px;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 1000px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: .25fr 5fr .25fr;  /* Balance the space around the middle column */
+    align-items: center;
+    padding: 10px 20px;  /* Adjusted padding for better space management */
+
+  }
+
+  #logo-link {
+    grid-column: 1;
+    justify-self:center;  /* Aligns the logo to the left */
+  }
+
+  .menu {
+    grid-column: 3;
+    justify-self: center;  /* Centers the menu icon */
+    order: 2;  /* Ensures menu icon is in the middle */
+  }
+
+  .menu-icon {
+    display: flex;
+    padding: 0;  /* Removes padding to save space */
+    height: 40px;  /* Sets a specific height for better touch area */
+    width: 40px;  /* Sets width to keep the button square */
+    align-items: center;
+    justify-content: center;
+  }
+
+  #contact-link {
+    grid-column: 2;
+    justify-self: end;  /* Aligns the contact link to the right */
+    margin-right: 10px;
+    border: 1px solid #bc4200;
+    border-radius: 10px;
+  }
+
+  #contact-link:hover{
+    border-radius: 10px;
+  }
+
+  #contact-link a span{
+    font-size: 12px;
+    border-radius: 20px;
+    padding-right: 0px;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 60px;  /* Adjusted for header height */
+    right: -130%;  /* Start off-screen to the right */
+    width: 100%;  /* Full width */
+    height: calc(100% - 60px);  /* Full screen height minus navbar */
+    background-color: rgba(12, 12, 12, 0.975);  /* Dark background for dropdown */
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease-out;
+    z-index: 1000;
+    border-radius: 0;
+
+
+  }
+
+  .navbar-links.active {
+    right: 0;  /* Show menu when active */
+  }
+
+  .navbar-links a {
+    width: 75%;
+    padding: 15px 10px;
+    text-align: center;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-links a span {
+    font-size: 16px;  /* Increases font size for better readability */
+    margin-top: 0;
+  }
+
+  .navbar-links a span i {
+    margin-right: 10px;
+    color: #ff5a00;
+  }
+  .navbar-links a span:hover, .navbar-links a span.active{
+    border: none;
+    background-color: transparent;
+  }
+
+  .navbar-links a:hover{
+    background-color: #000000;
+    width: 100%;
+  }
+
+  .logo {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 440px){
+  .logo img{
+    width: 150px;
+  }
+}
+.menu-icon span {
+  background: #fff; /* Ensure menu icon bars are visible */
+}
+
+

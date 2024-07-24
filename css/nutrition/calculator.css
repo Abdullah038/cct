@@ -1,0 +1,268 @@
+#calories-cal-background {
+  background-image: url("images/backgroundAll.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.calories-cal {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+
+  background-color: #fcfcfc;
+}
+
+.calories-cal-header {
+  position: relative;
+  text-align: center;
+  color: #3c3c3c;
+  margin: 10px 0 5px 0; /* Add margin for better spacing */
+}
+
+.calories-cal-header::before,
+.calories-cal-header::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  width: 30%; /* Adjust the length as needed */
+  height: 0.5px; /* Line thickness */
+  background-color: #bbbbbb; /* Line color */
+}
+
+.calories-cal-header::before {
+  left: 0;
+}
+
+.calories-cal-header::after {
+  right: 0;
+}
+
+.calories-cal-header h3 {
+  display: inline-block;
+  font-size: 1.5em;
+  background-color: #fcfcfc; /* Match the background color of the container for overlap */
+  padding: 0 20px 20px 20px; /* Add padding around the text */
+}
+.calories-cal-inputs-cover{
+  display: flex;
+  justify-content: center;
+}
+
+.calories-cal-inputs {
+  display: grid;
+  grid-template-columns: 0.225fr 0.325fr 0.225fr 0.225fr;
+  grid-template-rows: 0.8fr 0.2fr;
+  margin-top: 10px;
+  width: 80%;
+}
+.calories-cal-input-upper {
+  grid-row: 1;
+}
+.calories-cal-input-lower {
+  grid-row: 2;
+  font-size: 1.3em;
+  opacity: 0.5;
+  margin-top: 10px;
+}
+
+.calories-cal-input-upper,
+.calories-cal-input-lower {
+  display: flex;
+  justify-content: center;
+}
+.calories-cal-label-side label {
+  font-size: 1.2em;
+  opacity: 0.75;
+}
+.calories-cal-input-gender {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.calories-cal-height {
+  display: flex;
+  flex-direction: row;
+}
+.calories-cal-inputs input[type="number"],
+.calories-cal-inputs input[type="radio"] + label {
+  padding: 30px 10px;
+  width: 90px;
+  margin: 5px;
+  text-align: center;
+  font-size: 2em;
+  color: #ff5900;
+}
+.calories-cal-inputs input[type="radio"] + label {
+  color: #ff590094;
+}
+.calories-cal-inputs input[type="number"] {
+  border: 1px solid #8d8d8d;
+  border-radius: 15px;
+  background-color: transparent;
+}
+.calories-cal-inputs input::placeholder {
+  color: #b5b5b5;
+}
+.calories-cal-activity {
+  width: 80%;
+}
+.calories-cal-activity p {
+  color: #555555;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.calories-cal-activity .activity-level-options {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 10px;
+  font-size: 1.15em;
+}
+.calories-cal-activity input[type="radio"] + label {
+  opacity: 0.75;
+}
+.calories-cal-inputs input[type="radio"]:checked + label,
+.calories-cal-activity input[type="radio"]:checked + label {
+  color: #ff5900;
+  opacity: 1;
+}
+
+.calories-cal-activity input[type="radio"]:checked + label {
+  font-weight: bold;
+}
+
+.calories-cal-activity input[type="radio"] + label {
+  margin: 5px;
+  padding: 5px 10px;
+
+  cursor: pointer;
+  color: #252525;
+}
+
+.calories-cal-activity input[type="radio"] {
+  display: none; /* Hide the default radio button */
+}
+
+.calories-cal-inputs label {
+  color: #020202;
+}
+
+.calories-cal-result {
+  text-align: center;
+  margin-top: 20px;
+  border-left: 1px solid rgb(179, 179, 179);
+}
+
+.calories-cal-activity button {
+  padding: 10px 20px;
+  color: #ff5900;
+  background-color: transparent;
+  border: 1px solid #ff5900;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 50px;
+  margin: 30px 0 0 10px;
+}
+
+.calories-cal-activity button:hover {
+  background-color: #ff5900;
+  color: #fcfcfc;
+}
+
+#result-display {
+  font-size: 1.2em;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calories-statement-result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  padding-bottom: 10px;
+}
+
+#calories-cal-statement-result {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+#calories-result {
+  color: #ff5900;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+#result-display p {
+  font-size: 1.5em;
+  opacity: 0.75;
+  margin: 0;
+}
+.calories-result-text {
+  margin-top: 10px;
+  color: #878787;
+  width: 80%;
+  font-size: 0.8em;
+}
+.mobile-view{
+  display: block;
+}
+
+.desktop-view{
+  display: none;
+}
+
+@media (max-width: 1200px){
+  .calories-cal-inputs{
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px){
+  .calories-cal-inputs {
+    display: grid;
+    grid-template-columns: .25fr .75fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+}
+
+
+.calories-cal-input-upper {
+  grid-row: auto;
+  grid-column: 2;
+  justify-content: flex-start;
+  margin-left: 42px;
+}
+.calories-cal-input-lower{
+  grid-column: 1;
+  grid-row: auto;
+}
+
+.mobile-view{
+  display: none;
+}
+.desktop-view{
+  display: block;
+}
+
+.calories-statement-result{
+  grid-template-columns: 1fr;
+}
+
+.calories-cal-result{
+  border-left: none;
+}
+
+.calories-cal-header::before, .calories-cal-header::after{
+  display: none;
+}
+
+.calories-cal-inputs input[type="number"], .calories-cal-inputs input[type="radio"] + label{
+  width: 70px;
+}
+}

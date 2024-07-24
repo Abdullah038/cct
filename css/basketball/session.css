@@ -1,0 +1,156 @@
+p {
+    margin: 0;
+  }
+  
+  .session-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 25px;
+  }
+  
+  .session-info-head {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .session-info-head-head {
+    font-size: 100px;
+    font-weight: bolder;
+    letter-spacing: -13px;
+  }
+  
+  .session-info-head-text {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+  }
+  
+  .session-info-content {
+    color: #fff;
+  }
+  
+  .inner {
+    padding: 20px;
+    width: 80%;
+  }
+  
+  .d3, .d1 {
+    border-right: 1px solid #2e2e2e;
+  }
+  
+  .d3, .d2 {
+    border-bottom: 1px solid #2e2e2e;
+  }
+  
+  .d1, .d2, .d3, .one-on-one {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .session-info-head-one-on-one {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .session-info-head-one {
+    font-size: 100px;
+    font-weight: bolder;
+    letter-spacing: -10px;
+    color: #fff;
+    line-height: 35px;
+    padding-bottom: 45px;
+  }
+  
+  .session-info-head-text-one {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the "Session" text */
+    font-size: 30px; /* Ensure it matches the font size */
+    color: #fff;
+    margin-left: 6px;
+  }
+  
+  @media (max-width: 868px) {
+    .session-info {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      padding: 15px;
+    }
+  
+    .session-info-head-head {
+      font-size: 70px;
+      letter-spacing: -10px;
+    }
+  
+    .session-info-head-text {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+  
+    .inner {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    .d3, .d1 {
+      border-right: none;
+    }
+  
+    .d3, .d2, .d1 {
+      border-bottom: 1px solid #2e2e2e;
+    }
+  
+    .session-info-head-one {
+      font-size: 70px;
+      letter-spacing: -7px;
+      line-height: 25px;
+      padding-bottom: 25px;
+    }
+  
+    .session-info-head-text-one {
+      font-size: 20px;
+      margin-left: 3px;
+    }
+    .session-info-head {
+        gap: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .session-info {
+      padding: 10px;
+    }
+  
+    .session-info-head-head {
+      font-size: 50px;
+      letter-spacing: -8px;
+    }
+  
+    .session-info-head-text {
+      font-size: 15px;
+      margin-left: 5px;
+    }
+  
+    .inner {
+      padding: 10px;
+      padding-bottom: 40px;
+    }
+  
+    .session-info-head-one {
+      font-size: 50px;
+      letter-spacing: -5px;
+      line-height: 20px;
+      padding-bottom: 15px;
+    }
+  
+    .session-info-head-text-one {
+      font-size: 15px;
+      margin-left: 2px;
+    }
+  }
+  

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/components/navbar.css" />
+  <link rel="stylesheet" href="css/components/footer.css" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="css/nutrition/hero-sect.css" />
+  <link rel="stylesheet" href="css/nutrition/calculator.css" />
+  <link rel="stylesheet" href="css/nutrition/quote.css" />
+  <link rel="stylesheet" href="css/nutrition/weight-muscle.css" />
+  <link rel="stylesheet" href="css/nutrition/macro-micro.css" />
+  <link rel="stylesheet" href="css/nutrition/jeffChef.css" />
+  <link rel="stylesheet" href="css/all/faq.css" />
+
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div id="logo-link">
+        <a href="#home" class="logo">
+          <img src="images/cctrainingLogo.png" width="40" alt="logo" />
+        </a>
+      </div>
+      <div class="menu">
+        <button class="menu-icon" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links-all">
+          <div class="navbar-links" id="navbarLinks">
+            <a href="index.html"><span><i class="fas fa-home"></i> HOME</span></a>
+            <a href="training.html"><span><i class="fas fa-dumbbell"></i> TRAINING</span></a>
+            <a href="nutrition.html"><span class="active"><i class="fas fa-apple-alt"></i> NUTRITION</span></a>
+            <a href="basketall.html"><span><i class="fas fa-basketball-ball"></i> BASKETBALL</span></a>
+            <a href="testimonials.html"><span><i class="fas fa-comments"></i> TESTIMONIALS</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="contact-link">
+        <a href="index.html#booking-form">
+          <span>BOOK NOW <i class="fas fa-calendar-check"></i></span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero-sections">
+      <div id="nutrition-heading">
+        <h1>NUTRITION AND HEALTH</h1>
+
+        <h2>
+          <span id="nutrition-heading-h2-top">
+            OPTIMAL <span class="signature-color"> EATING</span></span><br /><span id="nutrition-heading-h2-bottom">
+            FOR OPTIMAL <span class="signature-color">FITNESS</span></span>
+        </h2>
+        <div id="nutrition-heading-link">
+          <a href="#"><span>ASK JEFF</span> <i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </section>
+<section id="calories-cal-background">
+  <div id="calories-calculator" class="calories-cal">
+    <div class="calories-cal-header">
+      <h3>CALORIES CALCULATOR</h3>
+      <div class="calories-cal-inputs-cover">
+        <div class="calories-cal-inputs">
+          <div class="calories-cal-input-lower desktop-view">
+            <label for="age">AGE</label>
+          </div>
+          <div class="calories-cal-input-inner calories-cal-input-upper">
+            <input type="number" placeholder="25" id="age" />
+          </div>
+          <div class="calories-cal-input-lower mobile-view">
+            <label for="age">AGE</label>
+          </div>
+          <div class="calories-cal-input-lower desktop-view">
+            <label for="height">HEIGHT</label>
+          </div>
+          <div class="calories-cal-input-inner calories-cal-input-upper calories-cal-height">
+            <div class="calories-cal-label-side">
+              <input type="number" placeholder="5" id="height-ft" />
+              <label for="height-ft">ft.</label>
+            </div>
+            <div class="calories-cal-label-side">
+              <input type="number" placeholder="11" id="height-in" />
+              <label for="height-in">in.</label>
+            </div>
+          </div>
+          <div class="calories-cal-input-lower mobile-view">
+            <label for="height">HEIGHT</label>
+          </div>
+          <div class="calories-cal-input-lower desktop-view">
+            <label for="weight">WEIGHT</label>
+          </div>
+          <div class="calories-cal-input-inner calories-cal-input-upper">
+            <div class="calories-cal-label-side">
+              <input type="number" placeholder="155" id="weight" />
+              <label for="weight-lb">lb.</label>
+            </div>
+          </div>
+          <div class="calories-cal-input-lower mobile-view">
+            <label for="weight">WEIGHT</label>
+          </div>
+          <div class="calories-cal-input-lower desktop-view">
+            <label for="gender">GENDER</label>
+          </div>
+          <div class="calories-cal-input-inner calories-cal-input-upper">
+            <div class="calories-cal-input-gender">
+              <div>
+                <input type="radio" name="gender" value="male" id="male" />
+                <label for="male">Male</label>
+              </div>
+              <div>
+                <input type="radio" name="gender" value="female" id="female" />
+                <label for="female">Female</label>
+              </div>
+            </div>
+          </div>
+          <div class="calories-cal-input-lower mobile-view">
+            <label for="gender">GENDER</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="calories-cal-statement-result">
+      <div class="calories-statement-result">
+        <div class="calories-cal-activity">
+          <p>Select the statement that best describes you:</p>
+          <div class="activity-level-options">
+            <input type="radio" name="activity" id="inactive" value="inactive" />
+            <label for="inactive">Inactive</label>
+            <input type="radio" name="activity" id="somewhat_active" value="somewhat_active" />
+            <label for="somewhat_active">Somewhat Active</label>
+            <input type="radio" name="activity" id="active" value="active" />
+            <label for="active">Active</label>
+            <input type="radio" name="activity" id="very_active" value="very_active" />
+            <label for="very_active">Very Active</label>
+          </div>
+          <button onclick="calculateCalories()">Calculate</button>
+        </div>
+        <div class="calories-cal-result">
+          <div id="result-display">
+            <span id="calories-result">0000</span>
+            <p>CALORIES</p>
+            <div class="calories-result-text">
+              Please select an activity level to see your recommended calorie intake.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="quote">
+      <div id="quote-all">
+        <div id="dumbell-quote">
+          <img src="images/dumbell.png" width="200" alt="" />
+        </div>
+        <div id="quote-quote">
+          <p>
+            "Success isn't always about 'greatness', it's about consistency.
+            Consistent, hard work gains success. Greatness will come"
+          </p>
+          <p><b>- Dwayne 'the Rock' Johnson</b></p>
+        </div>
+        <div id="scale-quote">
+          <img src="images/scale.png" width="200" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="weight-muscle">
+      <div id="weight-muscle-all">
+        <div class="desktop-view-weight" id="weight-muscle-img">
+          <img src="images/jeff-weight-muscle.jpg" width="300" alt="" />
+        </div>
+        <div id="weight-muscle-content">
+          <p id="weight-muscle-top-p">Are you looking to</p>
+          <h3>
+            Lose Weight <span class="signature-color"> or</span> <br />
+            Gain Muscle?
+          </h3>
+          <div class="mobile-view-weight" id="weight-muscle-img ">
+            <img src="images/jeff-weight-muscle.jpg" width="300" alt="" />
+          </div>
+          <p id="weight-muscle-bottom-p">
+            If you are going to use a passage of Lorem Ipsum, you need to be
+            sure there isn't anything embarrassing hidden in the middle of
+            text. All the Lorem Ipsum generators on the Internet tend to
+            repeat predefined chunks as necessary, making this the first true
+            generator on the Internet. 
+          </p>
+          <div id="weight-muscle-img-p">
+            <img src="images/jeff-highfive.jpg" width="250" alt="" />
+            <p>
+              <span class="signature-color"> JEFF</span> THE <br />
+              MAN THE <br />
+              <span class="signature-color"> MYTH</span>
+            </p>
+          </div>
+
+          <a href="">Talk to Jeff about your goals</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="macro-micro">
+      <div id="macro-micro-all">
+        <div id="macro-micro-content">
+          <h3>
+            <span class="signature-color">MICRO</span> &
+            <span class="signature-color">MACRO</span> <br />
+            <span id="content-h3-nutrition">NUTRITIONS</span>
+          </h3>
+          <div id="micro-macro-p">
+            <div id="micro" data-label="MICRO">
+              <p>
+                There are many variations of passages of Lorem Ipsum
+                available, but the majority have suffered alteration in some
+                form, by injected humour, or randomised words which don't look
+                even slightly believable. If you are going to use a passage of
+                Lorem Ipsum.
+              </p>
+            </div>
+            <div id="macro" data-label="MACRO">
+              <p>
+                There are many variations of passages of Lorem Ipsum
+                available, but the majority have suffered alteration in some
+                form, by injected humour, or randomised words which don't look
+                even slightly believable. If you are going to use a passage of
+                Lorem Ipsum.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="macro-micro-diagram">
+          <div id="micronutrients">
+            <h4>MICRONUTRIENTS</h4>
+            <div class="micro-macro-imgs">
+              <div class="image-container">
+                <img src="images/icons/vitamin.png" height="50px" alt="" />
+                <p>VITAMINS</p>
+              </div>
+              <div class="image-container">
+                <img src="images/icons/coal.png" height="50px" alt="" />
+                <p>MINERALS</p>
+              </div>
+            </div>
+          </div>
+          <div id="macronutrients">
+            <h4>MACRONUTRIENTS</h4>
+            <div class="micro-macro-imgs">
+              <div class="image-container">
+                <img src="images/icons/protein.png" height="50px" alt="" />
+                <p>PROTEINS</p>
+              </div>
+              <div class="image-container">
+                <img src="images/icons/olive-oil.png" height="50px" alt="" />
+                <p>FATS</p>
+              </div>
+              <div class="image-container">
+                <img src="images/icons/starch.png" height="50px" alt="" />
+                <p>CARBOHYDRATES</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recipe-carousel">
+      <div id="recipe-carousel-h3">
+        <h3>
+          <span class="signature-color">JEFF</span> THE
+          <span class="signature-color">CHEF</span>
+        </h3>
+      </div>
+
+      <div id="slider-recipe">
+        <div class="owl-carousel">
+          <div class="slider-card">
+            <div class="testimonials-card">
+              <div class="content-testimonial">
+                <div class="content-testimonial-text">
+                  <img src="images/nutrition/plate-food.png" alt="" />
+                </div>
+                <div class="nutrition-content">
+                  <h6>Asian Breakfast</h6>
+                  <div class="nutrition-facts">
+                    <div>
+                      <p>Protein: <span class="signature-color">35G</span></p>
+                      <p>Carbs: <span class="signature-color">25G</span></p>
+                    </div>
+                    <div>
+                      <p>Protein: <span class="signature-color">35G</span></p>
+                      <p>Protein: <span class="signature-color">35G</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card">
+            <div class="testimonials-card">
+              <div class="content-testimonial">
+                <div class="content-testimonial-text">
+                  <img src="images/nutrition/pasta-plate.png" alt="" />
+                </div>
+                <div class="nutrition-content">
+                  <h6>Pasta</h6>
+                  <div class="nutrition-facts">
+                    <div>
+                      <p>Protein: 35G</p>
+                      <p>Carbs: 25G</p>
+                    </div>
+                    <div>
+                      <p>Protein: 35G</p>
+                      <p>Protein: 35G</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card">
+            <div class="testimonials-card">
+              <div class="content-testimonial">
+                <div class="content-testimonial-text">
+                  <img src="images/nutrition/eggs-white-plate.png" alt="" />
+                </div>
+                <div class="nutrition-content">
+                  <h6>Power Sandwich</h6>
+                  <div class="nutrition-facts">
+                    <div>
+                      <p>Protein: 35G</p>
+                      <p>Carbs: 25G</p>
+                    </div>
+                    <div>
+                      <p>Protein: 35G</p>
+                      <p>Protein: 35G</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <div class="testimonials-card">
+              <div class="content-testimonial">
+                <div class="content-testimonial-text">
+                  <img src="images/nutrition/eggs-white-plate.png" alt="" />
+                </div>
+                <div class="nutrition-content">
+                  <h6>Power Sandwich</h6>
+                  <div class="nutrition-facts">
+                    <div>
+                      <p>Protein: 35G</p>
+                      <p>Carbs: 25G</p>
+                    </div>
+                    <div>
+                      <p>Protein: 35G</p>
+                      <p>Protein: 35G</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="recipe-carousel-link">
+          <a href="">PLAN YOUR NEXT <br />
+            MEAL WITH JEFF</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq-section">
+      <div class="heading-services heading-faq">
+        <h2>Frequantly Asked <span class="signature-color"> Questions</span></h2>
+      </div>
+      <div id="faq-container-cover">
+        <div class="faq-container">
+          <div class="faq">
+            <h3 class="faq-question">
+              <i class="fas fa-plus icon"></i> What services do you offer?
+            </h3>
+            <p class="faq-answer">
+              We offer a wide range of services including web design, digital
+              marketing, SEO optimization, and social media management to help
+              boost your brand's online presence.
+            </p>
+          </div>
+          <div class="faq">
+            <h3 class="faq-question">
+              <i class="fas fa-plus icon"></i> How do I get started with your
+              services?
+            </h3>
+            <p class="faq-answer">
+              You can start by contacting us through our website or by phone.
+              We will schedule a consultation to discuss your needs and how we
+              can best serve you.
+            </p>
+          </div>
+          <div class="faq">
+            <h3 class="faq-question">
+              <i class="fas fa-plus icon"></i> What is the typical project
+              timeline?
+            </h3>
+            <p class="faq-answer">
+              The timeline of a project varies depending on the scope and
+              complexity. However, a typical web design project takes about 4
+              to 6 weeks from inception to completion.
+            </p>
+          </div>
+          <div class="faq">
+            <h3 class="faq-question">
+              <i class="fas fa-plus icon"></i> Can I see examples of your past
+              work?
+            </h3>
+            <p class="faq-answer">
+              Absolutely! Visit our portfolio section or contact us directly
+              for case studies and examples of our past projects.
+            </p>
+          </div>
+          <div class="faq">
+            <h3 class="faq-question">
+              <i class="fas fa-plus icon"></i> What makes your services
+              unique?
+            </h3>
+            <p class="faq-answer">
+              Our approach is client-centric, focusing on creating customized
+              solutions that align with your business goals and ensure
+              long-term success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-socials">
+      <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-tiktok"></i></a>
+      <a href=""><i class="fa-brands fa-square-youtube"></i></a>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-main-content">
+        <h6>REQUEST A <span class="signature-color">CALL</span></h6>
+        <p>
+          Share your fitness goals with us and discover how we can help you
+          achieve them. Whether you're looking to build strength, lose weight,
+          or enhance your overall health, Coach Jeff is here to guide you.
+          Start your journey today!
+        </p>
+      </div>
+      <div class="footer-main-contact">
+        <div class="footer-contact-phone">
+          <a href=""><i class="fa-solid fa-phone"></i>(647) 914-1071</a>
+        </div>
+
+        <div class="footer-contact-mail">
+          <a href=""><i class="fa-solid fa-envelope"></i>info@cctraining.com</a>
+        </div>
+        <div class="footer-contact-address">
+          <a href=""><i class="fa-solid fa-location-dot"></i>1955 King St E #1,
+            <span class="break-line-footer"><br />&emsp;</span>Hamilton, ON</a>
+        </div>
+      </div>
+
+      <div class="footerForm">
+        <form action="" class="footer-form">
+          <div class="input-wrapper">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="FULL NAME" />
+          </div>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="E-MAIL" />
+          </div>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" placeholder="PHONE NO." />
+          </div>
+          <div class="input-wrapper textarea-wrapper">
+            <i class="fa-solid fa-message"></i>
+            <textarea placeholder="HOW CAN WE HELP?"></textarea>
+          </div>
+          <button>SUBMIT</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-third-col"></div>
+    <div class="footer-fourth-box"></div>
+    <div class="footer-fifth-box">
+      © 2024 Controlled Chaos Training. All rights reserved.&ensp;
+      <a href="/terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms and Conditions
+      </a>
+      &ensp;| Crafted and designed by&ensp;
+      <a href="https://lionsmedia.ca/" target="_blank" rel="noopener noreferrer">LIONSMEDIA.CA</a>
+    </div>
+
+    <div class="footer-sixth-box"></div>
+  </footer>
+
+  <script src="navbar.js"></script>
+  <script src="js/nutrition/calculator.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/nutrition/recipe.js"></script>
+  <script src="js/all/faq.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,323 @@
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+}
+
+.background-wrapper {
+  background-image: url("images/pesronalTrainer.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+
+.gradient {
+  background-image: linear-gradient(to right, #000 0%, transparent 50%);
+}
+
+#hero {
+  height: calc(100vh - 70.4px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  max-height: 650px;
+  padding: 25px 0px 0px 25px;
+  gap: 20px;
+}
+
+#hero-left-content {
+  display: grid;
+  grid-template-rows: 0.7fr 0.3fr;
+  color: #fff;
+}
+
+#hero-left-content h1 {
+  font-size: 61px;
+  font-weight: 800;
+  font-family: "Arial", sans-serif;
+  line-height: 1;
+  letter-spacing: -3px;
+  position: relative;
+  min-width: 532px;
+}
+
+#hero-left-content h1::before {
+  content: "";
+  position: absolute;
+  height: 0.5px;
+  top: 63px;
+  bottom: 0;
+  left: -31px;
+  width: 532px;
+  background-color: #fff;
+}
+
+#text-above-h1 {
+  margin-top: 60px;
+  font-size: 15px;
+}
+
+#text-below-h1 {
+  margin-top: 40px;
+  width: 500px;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+.signature-color {
+  color: #ff5a00;
+}
+
+#hero-rating {
+  display: flex;
+}
+
+.bottom-rating {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.above-rating {
+  font-size: 85px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  line-height: 0.8em;
+  font-family: sans-serif;
+}
+
+.rating-boxes {
+  padding-left: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+}
+
+#hero-right-content {
+  display: grid;
+  grid-template-rows: 0.4fr 0.6fr;
+  min-height: 500px;
+}
+
+#bottom-right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.service-links-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #000000;
+  width: 350px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#bottom-right-content a,
+.service-links-hero i {
+  text-decoration: none;
+  color: #fff;
+}
+
+#top-service-links-hero {
+  border-top-left-radius: 10px;
+}
+
+.service-links-hero:hover,
+.service-links-hero:hover i {
+  color: #ff5a00;
+  background-color: #1a1a1a;
+}
+
+#top-right-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+#testimony-hero {
+  margin-right: 25px;
+  padding: 25px;
+  width: 400px;
+  border: 0.1vw solid #ffffff;
+  border-radius: 10px 100px 10px 100px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#testimony-hero i {
+  font-size: 1.5em;
+  color: #ff5a00;
+  margin-bottom: 10px;
+}
+
+#testimony-hero p {
+  font-size: 1em;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+#testimony-hero-name {
+  margin-top: 10px;
+  padding-left: 5px;
+  color: #ff5a00;
+  font-weight: bold;
+  align-self: flex-end;
+  font-size: 0.9em;
+}
+
+@media (max-width: 1000px) {
+  .service-links-hero:hover {
+    color: #ff5a00;
+    background-color: transparent;
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    height: auto; /* Added height auto for better scaling */
+  }
+
+  #hero-left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #top-right-content {
+    display: none;
+  }
+
+  #hero-rating {
+    display: none;
+  }
+
+  #text-above-h1,
+  #hero-left-content h1,
+  #text-below-h1 {
+    text-align: center;
+  }
+
+  #hero-left-content h1 {
+    min-width: auto; /* Adjusted for better responsiveness */
+    font-size: 50px; /* Adjusted for smaller screens */
+  }
+
+  #hero-left-content h1::before {
+    width: 100%; /* Full width on mobile */
+    left: 0; /* Centered */
+    top: 52px;
+  }
+
+  #bottom-right-content {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .service-links-hero {
+    flex-direction: column-reverse;
+    width: 100%;
+    border-radius: 100px;
+    margin: 5px 0;
+  }
+
+  #top-service-links-hero {
+    border-top-left-radius: 100px;
+  }
+  #hero-right-content {
+    min-height: auto;
+  }
+
+  .service-links-hero {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%; /* Full width for better touch interaction */
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-links-hero i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #ff5a00;
+    color: #ffffff;
+    border-radius: 50%;
+  }
+  .service-links-hero {
+    font-size: 14px; /* Better readability on smaller screens */
+  }
+  .service-links-hero {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 559px) {
+  #hero {
+    padding: 10px;
+    height: auto; /* Ensures proper scaling */
+  }
+
+  #hero-left-content {
+    padding: 10px;
+  }
+
+  #hero-left-content h1 {
+    font-size: 35px;
+    min-width: auto;
+    line-height: 1.2; /* Adjusted for better readability */
+  }
+
+  #text-below-h1 {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #testimony-hero {
+    margin-right: 0;
+    padding: 15px;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  #testimony-hero p {
+    font-size: 12px;
+  }
+
+  #testimony-hero-name {
+    font-size: 10px;
+  }
+
+  #hero-right-content {
+    min-height: auto;
+  }
+
+  #hero {
+    height: auto;
+    min-height: auto;
+  }
+
+  #hero-left-content h1::before {
+    display: none; /* Hide the line on very small screens */
+  }
+}

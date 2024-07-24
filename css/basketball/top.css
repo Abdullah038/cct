@@ -1,0 +1,131 @@
+
+a {
+    text-decoration: none;
+}
+
+#nutrition-heading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #fff;
+}
+
+#nutrition-heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../images/basketball/basketball.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#nutrition-heading > * {
+    position: relative;
+    z-index: 1;
+}
+
+#nutrition-heading h1 {
+    font-size: 1.5em;
+    font-weight: 100;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+#nutrition-heading h2 {
+    text-align: center;
+    line-height: 1.5em;
+}
+
+#nutrition-heading-h2-top {
+    font-size: 2.5em;
+}
+
+#nutrition-heading-h2-bottom {
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+#nutrition-heading a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    background-color: #e649193c;
+    color: #fff;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#nutrition-heading a:hover {
+    background-color: #ff5a00;
+    color: #ffffff;
+}
+
+#nutrition-heading a i {
+    margin-left: 5px;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+#nutrition-heading a:hover i {
+    transform: translate(2px, -2px) rotate(45deg);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #nutrition-heading {
+        padding: 20px 10px;
+    }
+
+    #nutrition-heading h1 {
+        font-size: 1.2em;
+    }
+
+    #nutrition-heading-h2-top {
+        font-size: 2em;
+    }
+
+    #nutrition-heading-h2-bottom {
+        font-size: 1.5em;
+    }
+
+    #nutrition-heading a {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #nutrition-heading {
+        padding: 10px 5px;
+    }
+
+    #nutrition-heading h1 {
+        font-size: 1em;
+    }
+
+    #nutrition-heading-h2-top {
+        font-size: 1.5em;
+    }
+
+    #nutrition-heading-h2-bottom {
+        font-size: 1.2em;
+    }
+
+    #nutrition-heading a {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}

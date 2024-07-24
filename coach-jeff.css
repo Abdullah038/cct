@@ -1,0 +1,229 @@
+#coach-jeff {
+  color: #fff;
+  position: relative;
+  background-color: transparent;
+}
+
+#coach-jeff::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("images/basketball.png");
+  background-size: 85%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  opacity: 0.65;
+  z-index: 0;
+}
+
+#coach-jeff h3 {
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  margin: 120px 0px 50px 0;
+  position: relative; /* Needed for positioning pseudo-elements */
+  align-items: center; /* Ensures vertical center alignment of pseudo-elements if needed */
+}
+
+#coach-jeff h3::before,
+#coach-jeff h3::after {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+  top: 50%; /* Aligns the border to the middle of the H3 vertically */
+  width: calc(
+    50% - 4em
+  ); /* Half of the parent's width minus padding, adjust '2em' based on your design */
+  height: 0.5px; /* Height of the border */
+  background: #dfdfdf; /* Color of the border */
+}
+
+#coach-jeff h3::before {
+  left: 0; /* Aligns the border to the left */
+  margin-left: 20px; /* Adds some spacing from the edge of the screen */
+}
+
+#coach-jeff h3::after {
+  right: 0; /* Aligns the border to the right */
+  margin-right: 20px; /* Adds some spacing from the edge of the screen */
+}
+
+#coach-jeff-content-vid {
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  padding: 30px 40px;
+}
+
+#coach-jeff-content h4 {
+  font-size: 2em;
+  position: relative;
+  margin: 0px 0px 20px 0px;
+}
+#coach-jeff-content h4::before {
+  content: "";
+  position: absolute;
+  width: 332px;
+  height: 0.5px;
+  background-color: #fff;
+  left: -40px;
+  top: 37px;
+}
+
+#coach-jeff-content p {
+  width: 80%;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+#coach-jeff-content a {
+  text-decoration: none;
+  color: #ff5a00;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: relative;
+}
+
+#coach-jeff-content a::after {
+  content: "→";
+  margin-left: 10px;
+  position: absolute;
+  top: -8.5px;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+#coach-jeff-vid {
+  padding: 0 20px;
+  z-index: 1;
+}
+#coach-jeff-vid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#coach-jeff-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+}
+
+#coach-jeff-steps::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70.93%; /* Cover 80% of the container's height starting from the bottom */
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with 0.5 opacity */
+}
+
+.coach-jeff-step {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.coach-jeff-step h6 {
+  font-size: 4em;
+  margin: 0;
+  position: relative;
+}
+
+.coach-jeff-step h6::after {
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  width: 30%;
+  height: 1px;
+  top: 40px;
+  margin-left: 10px;
+}
+
+.coach-jeff-step p {
+  max-width: 85%;
+  margin-bottom: 20px;
+}
+
+.coach-jeff-step a {
+  text-decoration: none;
+  color: #ff5a00;
+  position: relative;
+}
+
+.coach-jeff-step a::after {
+  content: "→";
+  margin-left: 10px;
+  position: absolute;
+  top: -4.5px;
+  font-weight: bolder;
+  font-size: 1.2em;
+  z-index: 0;
+}
+#coach-jeff-vid-mobile {
+  display: none;
+}
+.coach-jeff-vid-desktop {
+  z-index: 1;
+}
+.coach-jeff-vid-desktop img{
+  border-radius: 5px;
+}
+
+
+@media (max-width: 1000px) {
+  .coach-jeff-vid-desktop {
+    display: none;
+  }
+  #coach-jeff-vid-mobile {
+    display: block;
+  }
+  #coach-jeff-steps {
+    display: none;
+  }
+  #coach-jeff-content-vid {
+    display: block;
+  }
+  #coach-jeff-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #coach-jeff h3 {
+    margin: 50px 0 0 0;
+  }
+  #coach-jeff-content h4 {
+    text-align: center;
+  }
+  #coach-jeff-content h4::before {
+    width: 277px;
+    left: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  #coach-jeff h3 {
+    font-size: 2.5em;
+  }
+  #coach-jeff-content h4 {
+    font-size: 1.6em;
+  }
+  #coach-jeff-content h4::before {
+    width: 218px;
+    left: 9px;
+    top: 29px;
+  }
+  #coach-jeff-content p {
+    width: 100%;
+    font-size: 1em;
+  }
+  #coach-jeff-vid-mobile img {
+    width: 90vw;
+    padding-bottom: 10px;
+    border-radius: 5px;
+  }
+}

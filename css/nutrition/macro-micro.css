@@ -1,0 +1,153 @@
+#macro-micro {
+    position: relative;
+}
+
+#macro-micro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/81F9E0B2-EEB0-4C99-8B87-A3DE8FF86CE6.png');
+    background-size: contain;
+    background-position: center;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+#macro-micro > * {
+    position: relative; /* This ensures that the content inside #macro-micro is visible above the pseudo-element */
+}
+
+#macro-micro-all{
+    display: grid;
+    grid-template-columns: .6fr .4fr;
+    padding: 30px;
+}
+
+#macro-micro-content h3{
+    font-size: 2em;
+    line-height: 1.1em;
+    position: relative;
+}
+#content-h3-nutrition{
+    font-size: 1.45em;
+    font-weight: 400;
+}
+#macro-micro-content h3::after{
+    content: '';
+    position: absolute;
+    background-color: #d3d3d3;
+    height: .5px;
+    width: 286px;
+    left: -30px;
+    top: 32px;
+}
+
+#micro, #macro {
+    width: 80%;
+    position: relative;
+    margin-left: 50px; /* Ensure there's room for the vertical labels */
+    max-width: 700px;
+}
+#micro-macro-p{
+    padding: 20px 0;
+}
+#micro::after, #macro::after {
+    content: attr(data-label);
+    font-size: 1em;
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: -11px;
+    font-weight: bolder;
+    top: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+#micro::after {
+    content: "MICRO";
+    color: rgba(211, 211, 211, 0.75);
+}
+
+#macro::after {
+    content: "MACRO";
+    color: rgba(255, 89, 0, 0.75);
+}
+
+
+#macro-micro-diagram {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-left: 1px solid #cccccc;
+}
+
+#macro-micro-diagram h4 {
+    font-size: 2em;
+    color: #ff5a00;
+}
+
+#micronutrients, #macronutrients {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.micro-macro-imgs {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    padding-top: 45px;
+    justify-content: space-evenly;
+}
+
+.image-container {
+    position: relative; /* Needed to position the pseudo-elements */
+    display: flex; /* Center the image in the container */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    flex-direction: column;
+}
+.image-container p{
+    margin: 5px;
+    opacity: .85;
+}
+
+.image-container img {
+    display: block;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 35px;
+    background: url(images/arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+@media (max-width: 991px){
+    #macro-micro-all {
+        display: flex;
+      
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    #macro-micro-diagram{
+        border-left: none;
+    }
+    #micro, #macro{
+        margin-left: 0;
+        width: 100%;
+    }
+}

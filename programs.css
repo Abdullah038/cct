@@ -1,0 +1,188 @@
+#title-programs h2 {
+  font-size: 3em;
+  padding-left: 200px;
+  position: relative;
+  color: #fff;
+}
+
+#title-programs h2::before {
+  content: "";
+  position: absolute;
+  height: .5px;
+  width: 180px;
+  background-color: rgb(133, 133, 133);
+  top: 26px;
+  left: -2px;
+}
+
+#programs-slider .slider {
+  padding-bottom: 50px;
+}
+
+#programs-slider .slider .owl-carousel .slider-card {
+  text-align: start;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 10px !important;
+}
+
+#programs-slider .slider .owl-carousel .slider-card:hover {
+  transform: translateY(-10px);
+}
+
+#programs-slider .slider-card img {
+  border-radius: 40px 5px 40px 5px;
+  transition: transform 0.3s; /* Smooth transformation on hover */
+}
+
+#programs-slider .slider-card img:hover {
+  transform: scale(1.025); /* Slight scale on hover for visual feedback */
+}
+
+#programs-slider .slider-card h5 {
+  margin: 3px 0px 0px 0px !important;
+  font-size: 1.2em;
+  color: #F5F5F5;
+}
+
+#programs-slider .slider-card h6 {
+  margin: 0 !important;
+  font-size: .75em;
+  font-weight: 100;
+  color: #c6c6c6;
+}
+
+#programs-slider .slider-card p {
+  font-size: .85em;
+  margin: 10px 0 0 0 !important;
+  max-width: 95% !important;
+  color: #F5F5F5;
+  opacity: .9;
+}
+
+#programs-slider .owl-nav .owl-prev, #programs-slider .owl-nav .owl-next {
+  position: absolute;
+  top: -17% !important;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc !important;
+}
+
+#programs-slider .owl-nav .owl-prev {
+  right: 10%; /* Moves it to the center from the right */
+  transform: translate(50%, -50%); /* Adjusts horizontally to half its width plus 10px gap */
+  margin-right: 4px; /* Half of the 10px gap */
+}
+
+/* Positioning the next button slightly to the right of the center */
+#programs-slider .owl-nav .owl-next {
+  left: 94%; /* Moves it to the center from the left */
+  transform: translate(-50%, -50%); /* Adjusts horizontally to half its width plus 10px gap */
+  margin-left: 4px; /* Half of the 10px gap */
+}
+
+#programs-slider .owl-carousel .owl-nav button.owl-prev, #programs-slider .owl-carousel .owl-nav button.owl-next {
+  color: #fff;
+}
+
+#programs-slider .owl-carousel .owl-nav button.owl-prev:hover, #programs-slider .owl-carousel .owl-nav button.owl-next:hover {
+  color: #ff5a00;
+}
+
+#programs-slider .owl-nav .owl-prev:hover, #programs-slider .owl-nav .owl-next:hover {
+  border: 1px solid #ff5a00 !important;
+}
+
+
+
+@media (max-width: 1000px) {
+  #title-programs h2 {
+    font-size: 2em;
+    padding-left: 20px;
+  }
+
+  #title-programs h2::before {
+    display: none;
+  }
+
+  #programs-slider .owl-nav .owl-prev, #programs-slider .owl-nav .owl-next {
+    top: -10% !important;
+  }
+
+  #programs-slider .owl-nav .owl-prev {
+    right: 15px;
+    transform: translate(0, -50%);
+    margin-right: 0;
+  }
+
+  #programs-slider .owl-nav .owl-next {
+    left: auto;
+    right: 15px;
+    transform: translate(0, -50%);
+    margin-left: 0;
+  }
+  #programs-slider .owl-carousel .owl-stage{
+    margin-left: 8px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #title-programs h2 {
+    font-size: 1.5em;
+    padding-left: 10px;
+  }
+
+  #programs-slider .slider-card h5 {
+    font-size: 1em;
+  }
+
+  #programs-slider .slider-card h6 {
+    font-size: 0.7em;
+  }
+
+  #programs-slider .slider-card p {
+    font-size: 0.75em;
+  }
+
+  #programs-slider .owl-nav .owl-prev, #programs-slider .owl-nav .owl-next {
+    width: 36px;
+    height: 36px;
+    top: -10% !important;
+  }
+
+  #programs-slider .owl-nav .owl-prev {
+    right: 10px;
+    transform: translate(0, -50%);
+  }
+
+  #programs-slider .owl-nav .owl-next {
+    left: auto;
+    right: 10px;
+    transform: translate(0, -50%);
+  }
+
+  .owl-item.slider-programs-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider-programs-mobile {
+    display: none;
+  }
+
+  #programs-slider .slider .owl-carousel .slider-card{
+    padding: 20px;
+  }
+
+}
+
+#programs-slider .owl-carousel .owl-stage{
+  margin-left: 250px;
+}

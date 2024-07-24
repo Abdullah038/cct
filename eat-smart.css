@@ -1,0 +1,116 @@
+#eat-smart {
+    background-color: #FF5A00;
+    display: grid;
+    grid-template-columns: .65fr .35fr;
+    position: relative;
+    overflow: visible;
+}
+
+#eat-smart-content {
+    padding-bottom: 20px;
+}
+
+#eat-smart-content h3 {
+    font-size: 3em;
+    margin: 30px 0px 20px 40px;
+    line-height: .9em;
+    position: relative;
+}
+
+#eat-smart-content h3::after {
+    content: "";
+    background-color: #ebebeb;
+    position: absolute;
+    width: 315px;
+    height: .5px;
+    left: -40px;
+}
+
+#eat-smart-content p {
+    margin-left: 80px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#eat-smart-content a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 80px;
+    position: relative;
+}
+
+#eat-smart-content a::after {
+    content: "→";
+    margin-left: 10px;
+    position: absolute;
+    top: -4px;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+#eat-smart-img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+}
+
+#eat-smart-img img {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    height: calc(100% + 5vw);
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    #eat-smart {
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #eat-smart-content {
+        padding: 0px 0;
+    }
+
+    #eat-smart-content h3 {
+        font-size: 2em;
+        margin: 20px 0;
+        line-height: 1.1em;
+    }
+
+    #eat-smart-content h3::after {
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #eat-smart-content p,
+    #eat-smart-content a {
+        margin-left: 0;
+    }
+
+    #eat-smart-content p {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    #eat-smart-content a {
+        font-size: 1em;
+    }
+
+    #eat-smart-content a::after {
+        top: 0;
+    }
+
+    #eat-smart-img {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    #eat-smart-img img {
+        display: none;
+    }
+}
